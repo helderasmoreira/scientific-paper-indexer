@@ -1,0 +1,27 @@
+Author: 
+Name
+Interests: Set of Interest
+Affiliations: Set of Afillitation
+
+
+Interest:
+Name
+
+
+Reference:
+Chapter
+Line
+Publication
+
+
+Affiliation:
+Name
+
+
+Publication:
+Name
+Description
+Date
+Affiliations: Set of Afillitation
+Authors : Set of Authors
+References : Set of Reference
