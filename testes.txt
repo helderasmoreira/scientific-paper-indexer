@@ -1,0 +1,7 @@
+create a := new Author("Hélder Moreira")
+
+create p := new Publication("VDM", "VDM++", new Date(10,11,2011), [a], new Affiliation("FEUP"), [])
+
+create p2 := new Publication("LDSO", "LDSO-FEUP", new Date(17,11,2011), [a], new Affiliation("FEUP"), [new Reference(1,1,p)])
+
+create i := new Indexer()
