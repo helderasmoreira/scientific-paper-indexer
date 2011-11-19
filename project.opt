@@ -21,7 +21,7 @@ errlevel:0
 SEP:1
 VDMSLMOD:0
 INDEX:0
-PrettyPrint_RTI:0
+PrettyPrint_RTI:1
 CG_RTI:0
 CG_CHECKPREPOST:1
 C_flag:0
