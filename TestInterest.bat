@@ -18,7 +18,4 @@ set S11=TestInterest.rtf
 
 "C:\Program Files (x86)\The VDM++ Toolbox Academic v8.0\bin\vppde" -p -R vdm.tc %S1% %S2% %S3% %S4% %S5% %S6% %S7% %S8% %S9% %S10% %S11%
 
-for /R %%f in (TestAuthor\*.arg) do call vdmtest "%%f"
-for /R %%f in (TestIndexer\*.arg) do call vdmtest "%%f"
-for /R %%f in (TestAffiliation\*.arg) do call vdmtest "%%f"
 for /R %%f in (TestInterest\*.arg) do call vdmtest "%%f"
