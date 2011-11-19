@@ -1,7 +1,19 @@
 create a := new Author("Hélder Moreira")
+create b := new Author("Rui Abreu")
+create c := new Author("Ana Paiva")
+create d := new Author("Tiago Babo")
 
-create p := new Publication("VDM", "VDM++", new Date(10,11,2011), [a], new Affiliation("FEUP"), [])
-
-create p2 := new Publication("LDSO", "LDSO-FEUP", new Date(17,11,2011), [a], new Affiliation("FEUP"), [new Reference(1,1,p)])
+create p := new Publication("VDM", "VDM++", new Date(10,11,2011), [a,d], new Affiliation("FEUP"), [])
+create p2 := new Publication("VDM", "VDM++", new Date(10,11,2011), [d,b], new Affiliation("FEUP"), [])
+create p3 := new Publication("VDM", "VDM++", new Date(10,11,2011), [b,c], new Affiliation("FEUP"), [])
 
 create i := new Indexer()
+
+i.addAuthor(a)
+i.addAuthor(b)
+i.addAuthor(c)
+i.addAuthor(d)
+
+i.addPublication(p)
+i.addPublication(p2)
+i.addPublication(p3)
