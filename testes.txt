@@ -9,11 +9,11 @@ create p3 := new Publication("VDM", "VDM++", new Date(10,11,2011), [b,c], new Af
 
 create i := new Indexer()
 
-i.addAuthor(a)
-i.addAuthor(b)
-i.addAuthor(c)
-i.addAuthor(d)
+p i.addAuthor(a)
+p i.addAuthor(b)
+p i.addAuthor(c)
+p i.addAuthor(d)
 
-i.addPublication(p)
+p i.addPublication(p)
 i.addPublication(p2)
 i.addPublication(p3)
