@@ -1,17 +1,2 @@
-[ objref13(Author):
-    < Author`affiliations = {  },
-      Author`interests = {  },
-      Author`name = "Helder Moreira" >,
-  objref14(Author):
-    < Author`affiliations = {  },
-      Author`interests = {  },
-      Author`name = "Tiago Babo" >,
-  objref15(Author):
-    < Author`affiliations = {  },
-      Author`interests = {  },
-      Author`name = "Rui Abreu" >,
-  objref16(Author):
-    < Author`affiliations = {  },
-      Author`interests = {  },
-      Author`name = "Ana Paiva" > ]
+true
 
