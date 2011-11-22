@@ -29,6 +29,7 @@ public class Interface {
 			System.out.println("5 - Relacionar autor e afiliação;");
 			System.out.println("6 - Adicionar publicação;");
 			System.out.println("7 - Listar publicações;");
+			System.out.println("8 - Adicionar Interesse a um autor;");
 			System.out.print("\n0 - Sair\nOpção: ");
 			op = in.nextInt();
 			switch(op)  {
@@ -54,11 +55,11 @@ public class Interface {
 			case 7: 
 				listPublications(true);
 				break;
-		
-				
 			case 9:
 				calcPathBetweenAuthors();
 				break;
+			case 8:
+				addAuthorInterest();
 			default:
 				break;
 			
@@ -88,6 +89,23 @@ public class Interface {
 		
 		for(Author a : (Author[])res.toArray())
 			System.out.print(a.name);
+	}
+	
+	private static void addAuthorInterest() throws CGException {
+		
+		listAuthors(false);
+		in = new Scanner(System.in);
+		System.out.print("Escolha o autor: ");
+		
+		int a = in.nextInt();
+		in = new Scanner(System.in);
+		System.out.print("Interesse a adicionar: " );
+		
+		String inter= in.nextLine();
+		Interest interest = new Interest(inter);
+		
+		((Author) i.authors.keySet().toArray()[a-1]).addInterest(interest);
+
 	}
 
 	private static void addPublication() throws CGException {
