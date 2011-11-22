@@ -247,15 +247,13 @@ public class Publication implements EvaluatePP {
 
 
 // ***** VDMTOOLS START Name=addCitation KEEP=NO
-  public Boolean addCitation (final Reference r) throws CGException {
+  public void addCitation (final Reference r) throws CGException {
 
     if (!this.pre_addCitation(r).booleanValue()) 
       UTIL.RunTime("Run-Time Error:Precondition failure in addCitation");
     sentinel.entering(((PublicationSentinel) sentinel).addCitation);
     try {
-
       citations.add(r);
-      return new Boolean(true);
     }
     finally {
       sentinel.leaving(((PublicationSentinel) sentinel).addCitation);

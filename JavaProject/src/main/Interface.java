@@ -36,13 +36,13 @@ public class Interface {
 				addAuthor();
 				break;
 			case 2:
-				listAuthors();
+				listAuthors(true);
 				break;
 			case 3: 
 				addAffiliation();
 				break;
 			case 4: 
-				listAffiliations();
+				listAffiliations(true);
 				break;
 			case 5:
 				relateAffiliationAuthor();
@@ -51,7 +51,7 @@ public class Interface {
 				addPublication();
 				break;
 			case 7: 
-				listPublications();
+				listPublications(true);
 				break;
 		
 			default:
@@ -64,7 +64,6 @@ public class Interface {
 		
 	}
 
-	
 	private static void addPublication() throws CGException {
 		
 		in = new Scanner(System.in);
@@ -81,7 +80,7 @@ public class Interface {
 		
 		Date d = new Date(Integer.parseInt(temp[0]), Integer.parseInt(temp[1]), Integer.parseInt(temp[2]));
 		
-		listPublications();
+		listPublications(false);
 		
 		in = new Scanner(System.in);
 		System.out.print("Indique as referencias separadas por virgula e no formato publicacao-capitulo-linha: (0 para ignorar) ");
@@ -103,10 +102,8 @@ public class Interface {
 			Reference r = new Reference(Integer.parseInt(temp3[1]), Integer.parseInt(temp3[2]), (Publication) i.publications.toArray()[Integer.parseInt(temp3[0])-1]);
 			refs.add(r);
 		}
-		if(!refs.isEmpty())
-			System.out.println(((Reference)refs.toArray()[0]).publication.toString());
 		
-		listAuthors();
+		listAuthors(false);
 		linha = in.nextLine();
 		String[] temp4;
 		delimiter = "-";
@@ -118,40 +115,59 @@ public class Interface {
 			authors.add((Author) i.authors.keySet().toArray()[Integer.parseInt(t)-1]);
 		}
 		
-		listAffiliations();
+		listAffiliations(false);
 		linha = in.nextLine();
-		
-		
 		
 		Publication p = new Publication(name, des, d, authors, (Affiliation) i.affiliations.toArray()[Integer.parseInt(linha)-1], refs);
 		
 		i.addPublication(p);
 		
-		System.out.println(p.toString());
-		
 	}
 
 
-	private static void listPublications() {
+	private static void listPublications(boolean total) {
 		System.out.println("\nPublicações presentes no indexer: ");
 		int z = 1;
 		for( Object a : i.publications.toArray()) {
-			System.out.println(z+" - " + ((Publication)a).name);
-		
-			// TODO: Imprimir as merdas das publicações
-			System.out.println("Referências: " + ((Publication)a).references.toString());
-			System.out.println("Citações: " + ((Publication)a).citations.toString());
+			if(total)
+			{
+				System.out.println("Nome: " + ((Publication)a).name);
+				System.out.println("Descrição: " + ((Publication)a).description);
+				
+				System.out.println("Autores: ");
+				for(Object author: ((Publication)a).authors)
+				{
+					System.out.println(((Author) author).name);
+				}
+				
+				if(!((Publication)a).references.isEmpty()) 
+					System.out.println("Referências (Capítulo | Linha | Publicação) : ");
+				for(Object ref: ((Publication)a).references)
+				{
+					System.out.println(((Reference) ref).chapter + " | " + ((Reference) ref).line + " | " + ((Reference) ref).publication.name);
+				}
+				
+				if(!((Publication)a).citations.isEmpty()) 
+					System.out.println("Citações (Capítulo | Linha | Publicação) : ");
+				for(Object ref: ((Publication)a).citations)
+				{
+					System.out.println(((Reference) ref).chapter + " | " + ((Reference) ref).line + " | " + ((Reference) ref).publication.name);
+				}
+				
+			}
+			else
+				System.out.println(z+" - " + ((Publication)a).name);
 			z++;
+			
 		}
-		
 		
 	}
 
 
 	private static void relateAffiliationAuthor() throws NumberFormatException, CGException {
 	
-		listAuthors();
-		listAffiliations();
+		listAuthors(false);
+		listAffiliations(false);
 		in = new Scanner(System.in);
 		System.out.print("Estabeleça a relação separando por - os ids: ");
 		String linha = in.nextLine();
@@ -164,16 +180,34 @@ public class Interface {
 		
 	}
 
-	private static void listAuthors() {
+	@SuppressWarnings("unchecked")
+	private static void listAuthors(boolean total) {
 	
 		System.out.println("\nAutores presentes no indexer: ");
 		int z = 1;
 		for( Object a : i.authors.keySet().toArray()) {
-			System.out.println(z+" - " + ((Author)a).name);
-		
-			// TODO: Imprimir o nome dos interesses e das afiliações
-			System.out.println("Interesses: " + ((Author)a).interests.toString());
-			System.out.println("Afiliações: " + i.authors.get(a).toString());
+			
+			if(total)
+			{
+			System.out.println("Nome: " +  ((Author)a).name);
+			
+			
+			if(!((Author)a).interests.isEmpty()) 
+				System.out.println("Interesses: ");
+			for(Object inter: ((Author)a).interests)
+			{
+				System.out.println(((Interest) inter).name);
+			}
+			
+			if(!((HashSet<Affiliation>)i.authors.get(((Author)a))).isEmpty()) 
+				System.out.println("Afiliações: ");
+			for(Object aff: ((HashSet<Affiliation>)i.authors.get(((Author)a))))
+			{
+				System.out.println(((Affiliation) aff).name);
+			}
+			}
+			else
+				System.out.println(z+" - " + ((Author)a).name);
 			z++;
 		}
 		
@@ -200,12 +234,15 @@ public class Interface {
 		
 	}
 	
-	private static void listAffiliations() {
+	private static void listAffiliations(boolean total) {
 		
 		System.out.println("\nAfiliações presentes no indexer: ");
 		int z = 1;
 		for( Object a : i.affiliations.toArray()) {
-			System.out.println(z + " - " + ((Affiliation)a).name);
+			if(total)
+				System.out.println(z + " - " + ((Affiliation)a).name);
+			else
+				System.out.println("Nome: " + ((Affiliation)a).name);
 			z++;
 		}
 		
