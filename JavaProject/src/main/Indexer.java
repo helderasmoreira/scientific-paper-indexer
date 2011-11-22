@@ -144,31 +144,7 @@ public class Indexer implements EvaluatePP {
       UTIL.RunTime("Run-Time Error:Precondition failure in addPublication");
     sentinel.entering(((IndexerSentinel) sentinel).addPublication);
     try {
-
       publications.add(p);
-      {
-
-        HashSet iset_4 = new HashSet();
-        iset_4 = p.references;
-        Reference ref = null;
-        for (Iterator enm_19 = iset_4.iterator(); enm_19.hasNext(); ) {
-
-          Reference elem_5 = (Reference) enm_19.next();
-          ref = (Reference) elem_5;
-          {
-
-            Publication obj_11 = null;
-            obj_11 = ref.publication;
-            Reference par_13 = null;
-            Integer arg_14 = null;
-            arg_14 = ref.chapter;
-            Integer arg_15 = null;
-            arg_15 = ref.line;
-            par_13 = new Reference(arg_14, arg_15, p);
-            obj_11.addCitation((Reference) par_13);
-          }
-        }
-      }
     }
     finally {
       sentinel.leaving(((IndexerSentinel) sentinel).addPublication);

@@ -142,6 +142,27 @@ public class Publication implements EvaluatePP {
       affiliation = (Affiliation) UTIL.clone(aff);
       references = (HashSet) UTIL.clone(ref);
       citations = (HashSet) UTIL.clone(new HashSet());
+      {
+
+        Reference ref_1 = null;
+        for (Iterator enm_27 = references.iterator(); enm_27.hasNext(); ) {
+
+          Reference elem_15 = (Reference) enm_27.next();
+          ref_1 = (Reference) elem_15;
+          {
+
+            Publication obj_19 = null;
+            obj_19 = ref_1.publication;
+            Reference par_21 = null;
+            Integer arg_22 = null;
+            arg_22 = ref_1.chapter;
+            Integer arg_23 = null;
+            arg_23 = ref_1.line;
+            par_21 = new Reference(arg_22, arg_23, this);
+            obj_19.addCitation((Reference) par_21);
+          }
+        }
+      }
     }
   }
 // ***** VDMTOOLS END Name=Publication
