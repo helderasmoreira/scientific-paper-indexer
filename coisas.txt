@@ -1,0 +1,10 @@
+
+
+5 - adicionar publicação
+6 - calcular caminho entre dois autores
+7 - contar citações de um autor por ele mesmo
+8 - contar citações de um autor por outros
+9 - contar publicações de um autor
+10 - calcular distância entre 2 autores
+11 - encontrar autores por afiliação
+12 - calcular distância de Erdos

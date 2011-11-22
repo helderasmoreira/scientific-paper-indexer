@@ -23,7 +23,7 @@ set S12=TestDate.rtf
 set S13=TestPublication.rtf
 
 rem -- Calls the interpreter for this test case
-"C:\Program Files (x86)\The VDM++ Toolbox Academic v8.0\bin\vppde" -i -D -I -P -Q -R vdm.tc -O %1.res %1 %S1% %S2% %S3% %S4% %S5% %S6% %S7% %S8% %S9% %S10% %S11% %S12% %S13%
+"C:\Program Files (x86)\The VDM++ Toolbox Academic v8.0\bin\vppde.exe" -i -D -I -P -Q -R vdm.tc -O %1.res %1 %S1% %S2% %S3% %S4% %S5% %S6% %S7% %S8% %S9% %S10% %S11% %S12% %S13%
 
 rem -- Check for difference between result of execution and expected result.
 if EXIST %1.exp fc /w %1.res %1.exp
