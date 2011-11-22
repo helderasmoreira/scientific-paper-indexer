@@ -31,6 +31,8 @@ public class Interface {
 			System.out.println("7 - Listar publicações;");
 			System.out.println("8 - Adicionar Interesse a um autor;");
 			System.out.println("9 - Calcular caminho entre 2 autores;");
+			System.out.println("10 - Calcular citações pelo próprio autor;");
+			System.out.println("11 - Calcular citações de um autor feitas por outro;");
 			System.out.print("\n0 - Sair\nOpção: ");
 			op = in.nextInt();
 			switch(op)  {
@@ -61,6 +63,13 @@ public class Interface {
 				break;
 			case 8:
 				addAuthorInterest();
+				break;
+			case 10:
+				countSelfCitations();
+				break;
+			case 11:
+				countOthersCitations();
+				break;	
 			default:
 				break;
 			
@@ -68,6 +77,28 @@ public class Interface {
 			
 			
 		}while(op!=0);
+		
+	}
+
+	private static void countSelfCitations() throws CGException {
+		listAuthors(false);
+		in = new Scanner(System.in);
+		System.out.print("Escolha o autor: ");
+		
+		int n = in.nextInt();
+		
+		System.out.println("Citações por si mesmo: " + i.countCitationsByMyself((Author)i.authors.keySet().toArray()[n-1]).intValue());
+		
+	}
+	
+	private static void countOthersCitations() throws CGException {
+		listAuthors(false);
+		in = new Scanner(System.in);
+		System.out.print("Escolha o autor: ");
+		
+		int n = in.nextInt();
+		
+		System.out.println("Citações por si mesmo: " + i.countCitationsByOthers((Author)i.authors.keySet().toArray()[n-1]).intValue());
 		
 	}
 
