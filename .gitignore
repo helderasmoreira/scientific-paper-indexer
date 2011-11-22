@@ -1,4 +1,6 @@
 ~*
+*.java.bak
 *.rtf.rtf
 *.tc
+JavaProject\bin\
 main
