@@ -14,9 +14,71 @@ public class Interface {
 	static Scanner in = new Scanner(System.in);
 	static Indexer i;
 	
+	
+private static void fillData() throws CGException {
+		
+		Author a = new Author("Hélder Moreira");
+		Author b = new Author("Tiago Babo");
+		Author c = new Author("Adriana Lima");
+		Author d = new Author("Carlos Santos");
+		
+		Interest i1 = new Interest("Programação");
+		Interest i2 = new Interest("Jogos");
+		Interest i3 = new Interest("Música");
+		
+		a.addInterest(i1);
+		a.addInterest(i2);
+		a.addInterest(i3);
+		b.addInterest(i1);
+		c.addInterest(i2);
+		d.addInterest(i3);
+		
+		i.addAuthor(a);
+		i.addAuthor(b);
+		i.addAuthor(c);
+		i.addAuthor(d);
+		
+		Affiliation aff = new Affiliation("FEUP");
+		i.addAffiliation(a, aff);
+		i.addAffiliation(b, aff);
+		i.addAffiliation(c, aff);
+		i.addAffiliation(d, aff);
+		
+		HashSet<Author> h1 = new HashSet<Author>();
+		h1.add(a);
+		h1.add(b);
+		HashSet<Author> h2 = new HashSet<Author>();
+		h2.add(b);
+		h2.add(c);
+		HashSet<Author> h3 = new HashSet<Author>();
+		h3.add(c);
+		h3.add(d);
+
+		HashSet<Reference> hr0 = new HashSet<Reference>();
+		Publication p1 = new Publication("FEUP", "FEUP", new Date(21,11,1990), h1, aff, hr0);
+		i.addPublication(p1);
+		
+		
+		HashSet<Reference> hr1 = new HashSet<Reference>();
+		Reference r1 = new Reference(1,1,p1);
+		hr1.add(r1);
+		Publication p2 = new Publication("VDM", "VDM", new Date(21,11,1990), h2, aff, hr1);
+		i.addPublication(p2);
+		
+		HashSet<Reference> hr2 = new HashSet<Reference>();
+		Reference r2 = new Reference(1,1,p2);
+		hr2.add(r2);
+		hr2.add(r1);
+		Publication p3 = new Publication("MFES", "MFES", new Date(21,11,1990), h3, aff, hr2);
+		i.addPublication(p3);
+		
+	}
+
+	
 	public static void main(String[] args) throws CGException {
 		
 		i = new Indexer();
+		fillData();
 		int op;
 		
 		
@@ -247,7 +309,7 @@ public class Interface {
 				{
 					System.out.println(((Reference) ref).chapter + " | " + ((Reference) ref).line + " | " + ((Reference) ref).publication.name);
 				}
-				
+				System.out.println();
 			}
 			else
 				System.out.println(z+" - " + ((Publication)a).name);
@@ -283,22 +345,23 @@ public class Interface {
 			
 			if(total)
 			{
-			System.out.println("Nome: " +  ((Author)a).name);
-			
-			
-			if(!((Author)a).interests.isEmpty()) 
-				System.out.println("Interesses: ");
-			for(Object inter: ((Author)a).interests)
-			{
-				System.out.println(((Interest) inter).name);
-			}
-			
-			if(!((HashSet<Affiliation>)i.authors.get(((Author)a))).isEmpty()) 
-				System.out.println("Afiliações: ");
-			for(Object aff: ((HashSet<Affiliation>)i.authors.get(((Author)a))))
-			{
-				System.out.println(((Affiliation) aff).name);
-			}
+				System.out.println("Nome: " +  ((Author)a).name);
+				
+				
+				if(!((Author)a).interests.isEmpty()) 
+					System.out.println("Interesses: ");
+				for(Object inter: ((Author)a).interests)
+				{
+					System.out.println(((Interest) inter).name);
+				}
+				
+				if(!((HashSet<Affiliation>)i.authors.get(((Author)a))).isEmpty()) 
+					System.out.println("Afiliações: ");
+				for(Object aff: ((HashSet<Affiliation>)i.authors.get(((Author)a))))
+				{
+					System.out.println(((Affiliation) aff).name);
+				}
+				System.out.println();
 			}
 			else
 				System.out.println(z+" - " + ((Author)a).name);
