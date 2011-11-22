@@ -30,6 +30,7 @@ public class Interface {
 			System.out.println("6 - Adicionar publicação;");
 			System.out.println("7 - Listar publicações;");
 			System.out.println("8 - Adicionar Interesse a um autor;");
+			System.out.println("9 - Calcular caminho entre 2 autores;");
 			System.out.print("\n0 - Sair\nOpção: ");
 			op = in.nextInt();
 			switch(op)  {
@@ -81,14 +82,17 @@ public class Interface {
 		
 		String linha = in.nextLine();
 		String[] temp2;
-		String delimiter = ",";
+		String delimiter = "-";
 		temp2 = linha.split(delimiter);
 		
 		Vector<Author> res = new Vector<Author>();
 		res = i.pathBetween((Author)i.authors.keySet().toArray()[Integer.parseInt(temp2[0])-1], (Author)i.authors.keySet().toArray()[Integer.parseInt(temp2[1])-1]);
 		
-		for(Author a : (Author[])res.toArray())
-			System.out.print(a.name);
+		for(int i = 0; i < res.size(); i++)
+			if (i != res.size()-1)
+				System.out.print(res.get(i).name + " -> ");
+			else
+				System.out.println(res.get(i).name);
 	}
 	
 	private static void addAuthorInterest() throws CGException {
@@ -148,6 +152,7 @@ public class Interface {
 		}
 		
 		listAuthors(false);
+		System.out.println("Indique os autores separados por - : ");
 		linha = in.nextLine();
 		String[] temp4;
 		delimiter = "-";
@@ -284,9 +289,9 @@ public class Interface {
 		int z = 1;
 		for( Object a : i.affiliations.toArray()) {
 			if(total)
-				System.out.println(z + " - " + ((Affiliation)a).name);
-			else
 				System.out.println("Nome: " + ((Affiliation)a).name);
+			else
+				System.out.println(z + " - " + ((Affiliation)a).name);
 			z++;
 		}
 		
