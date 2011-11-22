@@ -2,6 +2,7 @@ package main;
 
 import java.util.HashSet;
 import java.util.Scanner;
+import java.util.Vector;
 
 import jp.co.csk.vdm.toolbox.VDM.CGException;
 import jp.co.csk.vdm.toolbox.VDM.UTIL;
@@ -54,6 +55,10 @@ public class Interface {
 				listPublications(true);
 				break;
 		
+				
+			case 9:
+				calcPathBetweenAuthors();
+				break;
 			default:
 				break;
 			
@@ -62,6 +67,27 @@ public class Interface {
 			
 		}while(op!=0);
 		
+	}
+
+	@SuppressWarnings("unchecked")
+	private static void calcPathBetweenAuthors() throws NumberFormatException, CGException {
+		
+		listAuthors(false);
+		
+		in = new Scanner(System.in);
+		System.out.print("Indique os dois autores no formato autor1-autor2: ");
+		
+		
+		String linha = in.nextLine();
+		String[] temp2;
+		String delimiter = ",";
+		temp2 = linha.split(delimiter);
+		
+		Vector<Author> res = new Vector<Author>();
+		res = i.pathBetween((Author)i.authors.keySet().toArray()[Integer.parseInt(temp2[0])-1], (Author)i.authors.keySet().toArray()[Integer.parseInt(temp2[1])-1]);
+		
+		for(Author a : (Author[])res.toArray())
+			System.out.print(a.name);
 	}
 
 	private static void addPublication() throws CGException {
