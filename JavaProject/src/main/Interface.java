@@ -15,6 +15,7 @@ public class Interface {
 	static Indexer i;
 	
 	
+@SuppressWarnings("unchecked")
 private static void fillData() throws CGException {
 		
 		Author a = new Author("Hélder Moreira");
@@ -39,6 +40,7 @@ private static void fillData() throws CGException {
 		i.addAuthor(d);
 		
 		Affiliation aff = new Affiliation("FEUP");
+		i.affiliations.add(aff);
 		i.addAffiliation(a, aff);
 		i.addAffiliation(b, aff);
 		i.addAffiliation(c, aff);
@@ -96,6 +98,8 @@ private static void fillData() throws CGException {
 			System.out.println("10 - Calcular citações pelo próprio autor;");
 			System.out.println("11 - Calcular citações de um autor feitas por outro;");
 			System.out.println("12 - Contar publicações de um autor;");
+			System.out.println("13 - Calcular distância entre dois autores;");
+			System.out.println("14 - Encontrar autores por afiliação;");
 			System.out.print("\n0 - Sair\nOpção: ");
 			op = in.nextInt();
 			switch(op)  {
@@ -135,6 +139,13 @@ private static void fillData() throws CGException {
 			case 12:
 				countPublications();
 				break;	
+			case 13:
+				calcDistanceBetweenAuthors();
+				break;
+			case 14:
+				findAuthorsByAffiliation();
+				break;
+				
 			default:
 				break;
 			
@@ -144,6 +155,41 @@ private static void fillData() throws CGException {
 		}while(op!=0);
 		
 	}
+
+	@SuppressWarnings("unchecked")
+	private static void findAuthorsByAffiliation() throws CGException {
+		listAffiliations(false);
+		in = new Scanner(System.in);
+		System.out.print("Escolha a afiliação: ");
+		
+		int n = in.nextInt();
+		
+		System.out.println("Autores na base de dados: ");
+		HashSet<Author> a = i.getAuthorsByAff((Affiliation)i.affiliations.toArray()[n-1]);
+		for(int i = 0; i < a.size(); i++)
+			System.out.println(((Author)a.toArray()[i]).name);
+	}
+
+
+	private static void calcDistanceBetweenAuthors() throws NumberFormatException, CGException {
+	listAuthors(false);
+		
+		in = new Scanner(System.in);
+		System.out.print("Indique os dois autores no formato autor1-autor2: ");
+		
+		
+		String linha = in.nextLine();
+		String[] temp2;
+		String delimiter = "-";
+		temp2 = linha.split(delimiter);
+		
+		
+		Double res = i.distanceBetween((Author)i.authors.keySet().toArray()[Integer.parseInt(temp2[0])-1], (Author)i.authors.keySet().toArray()[Integer.parseInt(temp2[1])-1]);
+		
+		System.out.println("Resultado: " + res.intValue());
+		
+	}
+
 
 	private static void countPublications() throws CGException {
 		listAuthors(false);
