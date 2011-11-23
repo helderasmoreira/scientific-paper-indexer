@@ -50,10 +50,9 @@ private static void fillData() throws CGException {
 		HashSet<Author> h1 = new HashSet<Author>();
 		h1.add(a);
 		h1.add(b);
-		h1.add(c);
 		HashSet<Author> h2 = new HashSet<Author>();
+		h2.add(b);
 		h2.add(c);
-		//h2.add(c);
 		HashSet<Author> h3 = new HashSet<Author>();
 		h3.add(c);
 		h3.add(d);
@@ -102,6 +101,7 @@ private static void fillData() throws CGException {
 			System.out.println("12 - Contar publicações de um autor;");
 			System.out.println("13 - Calcular distância entre dois autores;");
 			System.out.println("14 - Encontrar autores por afiliação;");
+			System.out.println("15 - Publicações por autor;");
 			System.out.print("\n0 - Sair\nOpção: ");
 			op = in.nextInt();
 			switch(op)  {
@@ -147,18 +147,62 @@ private static void fillData() throws CGException {
 			case 14:
 				findAuthorsByAffiliation();
 				break;
+			case 15:
+				findPublicationsByAuthor();
+				break;	
 				
 			default:
 				break;
 			
 			}
 			in = new Scanner(System.in);
+			
 			System.out.println("Prima ENTER para continuar...");
 			in.nextLine();
 			
 		}while(op!=0);
 		
 	}
+
+	private static void findPublicationsByAuthor() throws CGException {
+		listAuthors(false);
+		in = new Scanner(System.in);
+		System.out.print("Escolha o autor: ");
+		
+		int n = in.nextInt();
+		System.out.println("Publicações do autor: ");
+		
+		for( Object a : i.getPublicationsByAuthor((Author)i.authors.keySet().toArray()[n-1]).toArray()) {
+			
+				System.out.println("Nome: " + ((Publication)a).name);
+				System.out.println("Descrição: " + ((Publication)a).description);
+				
+				System.out.println("Autores: ");
+				for(Object author: ((Publication)a).authors)
+				{
+					System.out.println(((Author) author).name);
+				}
+				
+				if(!((Publication)a).references.isEmpty()) 
+					System.out.println("Referências (Capítulo | Linha | Publicação) : ");
+				for(Object ref: ((Publication)a).references)
+				{
+					System.out.println(((Reference) ref).chapter + " | " + ((Reference) ref).line + " | " + ((Reference) ref).publication.name);
+				}
+				
+				if(!((Publication)a).citations.isEmpty()) 
+					System.out.println("Citações (Capítulo | Linha | Publicação) : ");
+				for(Object ref: ((Publication)a).citations)
+				{
+					System.out.println(((Reference) ref).chapter + " | " + ((Reference) ref).line + " | " + ((Reference) ref).publication.name);
+				}
+				System.out.println();
+			
+		}
+		
+		
+	}
+
 
 	@SuppressWarnings("unchecked")
 	private static void findAuthorsByAffiliation() throws CGException {

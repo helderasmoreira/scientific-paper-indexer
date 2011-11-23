@@ -75,9 +75,11 @@ public class Indexer implements EvaluatePP {
 
     public final int countCitationsByOthers = 11;
 
-    public final int countPublicationsByAuthor = 12;
+    public final int getPublicationsByAuthor = 12;
 
-    public final int nr_functions = 13;
+    public final int countPublicationsByAuthor = 13;
+
+    public final int nr_functions = 14;
 
 
     public IndexerSentinel () throws CGException {}
@@ -807,6 +809,8 @@ public class Indexer implements EvaluatePP {
 // ***** VDMTOOLS START Name=addAffiliation KEEP=NO
   public void addAffiliation (final Author a, final Affiliation aff) throws CGException {
 
+    if (!this.pre_addAffiliation(a, aff).booleanValue()) 
+      UTIL.RunTime("Run-Time Error:Precondition failure in addAffiliation");
     sentinel.entering(((IndexerSentinel) sentinel).addAffiliation);
     try {
 
@@ -823,6 +827,16 @@ public class Indexer implements EvaluatePP {
     }
   }
 // ***** VDMTOOLS END Name=addAffiliation
+
+
+// ***** VDMTOOLS START Name=pre_addAffiliation KEEP=NO
+  public Boolean pre_addAffiliation (final Author a, final Affiliation aff) throws CGException {
+
+    Boolean varRes_3 = null;
+    varRes_3 = new Boolean(authors.containsKey(a));
+    return varRes_3;
+  }
+// ***** VDMTOOLS END Name=pre_addAffiliation
 
 
 // ***** VDMTOOLS START Name=getAuthorsByAff KEEP=NO
@@ -858,6 +872,52 @@ public class Indexer implements EvaluatePP {
     }
   }
 // ***** VDMTOOLS END Name=getAuthorsByAff
+
+
+// ***** VDMTOOLS START Name=getPublicationsByAuthor KEEP=NO
+  public HashSet getPublicationsByAuthor (final Author a) throws CGException {
+
+    if (!this.pre_getPublicationsByAuthor(a).booleanValue()) 
+      UTIL.RunTime("Run-Time Error:Precondition failure in getPublicationsByAuthor");
+    sentinel.entering(((IndexerSentinel) sentinel).getPublicationsByAuthor);
+    try {
+
+      HashSet ret = new HashSet();
+      {
+
+        Publication p = null;
+        for (Iterator enm_12 = publications.iterator(); enm_12.hasNext(); ) {
+
+          Publication elem_3 = (Publication) enm_12.next();
+          p = (Publication) elem_3;
+          {
+
+            Boolean cond_6 = null;
+            HashSet var2_8 = new HashSet();
+            var2_8 = p.authors;
+            cond_6 = new Boolean(var2_8.contains(a));
+            if (cond_6.booleanValue()) 
+              ret.add(p);
+          }
+        }
+      }
+      return ret;
+    }
+    finally {
+      sentinel.leaving(((IndexerSentinel) sentinel).getPublicationsByAuthor);
+    }
+  }
+// ***** VDMTOOLS END Name=getPublicationsByAuthor
+
+
+// ***** VDMTOOLS START Name=pre_getPublicationsByAuthor KEEP=NO
+  public Boolean pre_getPublicationsByAuthor (final Author a) throws CGException {
+
+    Boolean varRes_2 = null;
+    varRes_2 = new Boolean(authors.containsKey(a));
+    return varRes_2;
+  }
+// ***** VDMTOOLS END Name=pre_getPublicationsByAuthor
 
 }
 ;

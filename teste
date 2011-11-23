@@ -910,6 +910,7 @@ Initializing Indexer
 Initializing Author
 Initializing Date
  done
+Ignored coverage info from file `TestDate.rtf' since it is inconsistent with the syntax checked file.
 true
 A comparar os ficheiros C:\USERS\TIAGO\DESKTOP\SCIENTIFIC-PAPER-INDEXER\TESTAUTHOR\TestGoodUsage.arg.res e C:\USERS\TIAGO\DESKTOP\SCIENTIFIC-PAPER-INDEXER\TESTAUTHOR\TESTGOODUSAGE.ARG.EXP
 FC: n∆o foram encontradas diferenáas
@@ -9154,8 +9155,7 @@ Initializing Indexer
 Initializing Author
 Initializing Date
  done
-TestIndexer.rtf, l. 17, c. 17:
-  Run-Time Error 58: The pre-condition evaluated to false
+true
 A comparar os ficheiros C:\USERS\TIAGO\DESKTOP\SCIENTIFIC-PAPER-INDEXER\TESTINDEXER\TestPathBetween.arg.res e C:\USERS\TIAGO\DESKTOP\SCIENTIFIC-PAPER-INDEXER\TESTINDEXER\TESTPATHBETWEEN.ARG.EXP
 FC: n∆o foram encontradas diferenáas
 
