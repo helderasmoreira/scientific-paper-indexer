@@ -1,4 +1,4 @@
-VDM Test: '"C:\Users\Babo\Desktop\scientific-paper-indexer\TestAuthor\TestGoodUsage.arg"'
+VDM Test: '"C:\Users\Tiago\Desktop\scientific-paper-indexer\TestAuthor\TestGoodUsage.arg"'
 Parsing "Author.rtf" (Word RTF) ... ReadFontTbl: unknown token "\flomajor"
 ReadFontTbl: unknown token "\fdbmajor"
 ReadFontTbl: unknown token "\fhimajor"
@@ -911,10 +911,10 @@ Initializing Author
 Initializing Date
  done
 true
-Comparing files C:\USERS\BABO\DESKTOP\SCIENTIFIC-PAPER-INDEXER\TESTAUTHOR\TestGoodUsage.arg.res and C:\USERS\BABO\DESKTOP\SCIENTIFIC-PAPER-INDEXER\TESTAUTHOR\TESTGOODUSAGE.ARG.EXP
-FC: no differences encountered
+A comparar os ficheiros C:\USERS\TIAGO\DESKTOP\SCIENTIFIC-PAPER-INDEXER\TESTAUTHOR\TestGoodUsage.arg.res e C:\USERS\TIAGO\DESKTOP\SCIENTIFIC-PAPER-INDEXER\TESTAUTHOR\TESTGOODUSAGE.ARG.EXP
+FC: n∆o foram encontradas diferenáas
 
-VDM Test: '"C:\Users\Babo\Desktop\scientific-paper-indexer\TestAuthor\TestInterests.arg"'
+VDM Test: '"C:\Users\Tiago\Desktop\scientific-paper-indexer\TestAuthor\TestInterests.arg"'
 Parsing "Author.rtf" (Word RTF) ... ReadFontTbl: unknown token "\flomajor"
 ReadFontTbl: unknown token "\fdbmajor"
 ReadFontTbl: unknown token "\fhimajor"
@@ -1827,10 +1827,10 @@ Initializing Author
 Initializing Date
  done
 true
-Comparing files C:\USERS\BABO\DESKTOP\SCIENTIFIC-PAPER-INDEXER\TESTAUTHOR\TestInterests.arg.res and C:\USERS\BABO\DESKTOP\SCIENTIFIC-PAPER-INDEXER\TESTAUTHOR\TESTINTERESTS.ARG.EXP
-FC: no differences encountered
+A comparar os ficheiros C:\USERS\TIAGO\DESKTOP\SCIENTIFIC-PAPER-INDEXER\TESTAUTHOR\TestInterests.arg.res e C:\USERS\TIAGO\DESKTOP\SCIENTIFIC-PAPER-INDEXER\TESTAUTHOR\TESTINTERESTS.ARG.EXP
+FC: n∆o foram encontradas diferenáas
 
-VDM Test: '"C:\Users\Babo\Desktop\scientific-paper-indexer\TestIndexer\TestAffiliations.arg"'
+VDM Test: '"C:\Users\Tiago\Desktop\scientific-paper-indexer\TestIndexer\TestAffiliations.arg"'
 Parsing "Author.rtf" (Word RTF) ... ReadFontTbl: unknown token "\flomajor"
 ReadFontTbl: unknown token "\fdbmajor"
 ReadFontTbl: unknown token "\fhimajor"
@@ -2743,10 +2743,10 @@ Initializing Author
 Initializing Date
  done
 true
-Comparing files C:\USERS\BABO\DESKTOP\SCIENTIFIC-PAPER-INDEXER\TESTINDEXER\TestAffiliations.arg.res and C:\USERS\BABO\DESKTOP\SCIENTIFIC-PAPER-INDEXER\TESTINDEXER\TESTAFFILIATIONS.ARG.EXP
-FC: no differences encountered
+A comparar os ficheiros C:\USERS\TIAGO\DESKTOP\SCIENTIFIC-PAPER-INDEXER\TESTINDEXER\TestAffiliations.arg.res e C:\USERS\TIAGO\DESKTOP\SCIENTIFIC-PAPER-INDEXER\TESTINDEXER\TESTAFFILIATIONS.ARG.EXP
+FC: n∆o foram encontradas diferenáas
 
-VDM Test: '"C:\Users\Babo\Desktop\scientific-paper-indexer\TestIndexer\TestCitations.arg"'
+VDM Test: '"C:\Users\Tiago\Desktop\scientific-paper-indexer\TestIndexer\TestCitations.arg"'
 Parsing "Author.rtf" (Word RTF) ... ReadFontTbl: unknown token "\flomajor"
 ReadFontTbl: unknown token "\fdbmajor"
 ReadFontTbl: unknown token "\fhimajor"
@@ -3659,10 +3659,10 @@ Initializing Author
 Initializing Date
  done
 true
-Comparing files C:\USERS\BABO\DESKTOP\SCIENTIFIC-PAPER-INDEXER\TESTINDEXER\TestCitations.arg.res and C:\USERS\BABO\DESKTOP\SCIENTIFIC-PAPER-INDEXER\TESTINDEXER\TESTCITATIONS.ARG.EXP
-FC: no differences encountered
+A comparar os ficheiros C:\USERS\TIAGO\DESKTOP\SCIENTIFIC-PAPER-INDEXER\TESTINDEXER\TestCitations.arg.res e C:\USERS\TIAGO\DESKTOP\SCIENTIFIC-PAPER-INDEXER\TESTINDEXER\TESTCITATIONS.ARG.EXP
+FC: n∆o foram encontradas diferenáas
 
-VDM Test: '"C:\Users\Babo\Desktop\scientific-paper-indexer\TestIndexer\TestCoAuthorPath.arg"'
+VDM Test: '"C:\Users\Tiago\Desktop\scientific-paper-indexer\TestIndexer\TestCoAuthorPath.arg"'
 Parsing "Author.rtf" (Word RTF) ... ReadFontTbl: unknown token "\flomajor"
 ReadFontTbl: unknown token "\fdbmajor"
 ReadFontTbl: unknown token "\fhimajor"
@@ -4575,10 +4575,10 @@ Initializing Author
 Initializing Date
  done
 true
-Comparing files C:\USERS\BABO\DESKTOP\SCIENTIFIC-PAPER-INDEXER\TESTINDEXER\TestCoAuthorPath.arg.res and C:\USERS\BABO\DESKTOP\SCIENTIFIC-PAPER-INDEXER\TESTINDEXER\TESTCOAUTHORPATH.ARG.EXP
-FC: no differences encountered
+A comparar os ficheiros C:\USERS\TIAGO\DESKTOP\SCIENTIFIC-PAPER-INDEXER\TESTINDEXER\TestCoAuthorPath.arg.res e C:\USERS\TIAGO\DESKTOP\SCIENTIFIC-PAPER-INDEXER\TESTINDEXER\TESTCOAUTHORPATH.ARG.EXP
+FC: n∆o foram encontradas diferenáas
 
-VDM Test: '"C:\Users\Babo\Desktop\scientific-paper-indexer\TestIndexer\TestCountPublicationsByAuthor.arg"'
+VDM Test: '"C:\Users\Tiago\Desktop\scientific-paper-indexer\TestIndexer\TestCountPublicationsByAuthor.arg"'
 Parsing "Author.rtf" (Word RTF) ... ReadFontTbl: unknown token "\flomajor"
 ReadFontTbl: unknown token "\fdbmajor"
 ReadFontTbl: unknown token "\fhimajor"
@@ -5491,10 +5491,10 @@ Initializing Author
 Initializing Date
  done
 true
-Comparing files C:\USERS\BABO\DESKTOP\SCIENTIFIC-PAPER-INDEXER\TESTINDEXER\TestCountPublicationsByAuthor.arg.res and C:\USERS\BABO\DESKTOP\SCIENTIFIC-PAPER-INDEXER\TESTINDEXER\TESTCOUNTPUBLICATIONSBYAUTHOR.ARG.EXP
-FC: no differences encountered
+A comparar os ficheiros C:\USERS\TIAGO\DESKTOP\SCIENTIFIC-PAPER-INDEXER\TESTINDEXER\TestCountPublicationsByAuthor.arg.res e C:\USERS\TIAGO\DESKTOP\SCIENTIFIC-PAPER-INDEXER\TESTINDEXER\TESTCOUNTPUBLICATIONSBYAUTHOR.ARG.EXP
+FC: n∆o foram encontradas diferenáas
 
-VDM Test: '"C:\Users\Babo\Desktop\scientific-paper-indexer\TestIndexer\TestDistanceBetween.arg"'
+VDM Test: '"C:\Users\Tiago\Desktop\scientific-paper-indexer\TestIndexer\TestDistanceBetween.arg"'
 Parsing "Author.rtf" (Word RTF) ... ReadFontTbl: unknown token "\flomajor"
 ReadFontTbl: unknown token "\fdbmajor"
 ReadFontTbl: unknown token "\fhimajor"
@@ -6407,10 +6407,10 @@ Initializing Author
 Initializing Date
  done
 true
-Comparing files C:\USERS\BABO\DESKTOP\SCIENTIFIC-PAPER-INDEXER\TESTINDEXER\TestDistanceBetween.arg.res and C:\USERS\BABO\DESKTOP\SCIENTIFIC-PAPER-INDEXER\TESTINDEXER\TESTDISTANCEBETWEEN.ARG.EXP
-FC: no differences encountered
+A comparar os ficheiros C:\USERS\TIAGO\DESKTOP\SCIENTIFIC-PAPER-INDEXER\TESTINDEXER\TestDistanceBetween.arg.res e C:\USERS\TIAGO\DESKTOP\SCIENTIFIC-PAPER-INDEXER\TESTINDEXER\TESTDISTANCEBETWEEN.ARG.EXP
+FC: n∆o foram encontradas diferenáas
 
-VDM Test: '"C:\Users\Babo\Desktop\scientific-paper-indexer\TestIndexer\TesteAddPublication.arg"'
+VDM Test: '"C:\Users\Tiago\Desktop\scientific-paper-indexer\TestIndexer\TesteAddPublication.arg"'
 Parsing "Author.rtf" (Word RTF) ... ReadFontTbl: unknown token "\flomajor"
 ReadFontTbl: unknown token "\fdbmajor"
 ReadFontTbl: unknown token "\fhimajor"
@@ -7323,10 +7323,10 @@ Initializing Author
 Initializing Date
  done
 true
-Comparing files C:\USERS\BABO\DESKTOP\SCIENTIFIC-PAPER-INDEXER\TESTINDEXER\TesteAddPublication.arg.res and C:\USERS\BABO\DESKTOP\SCIENTIFIC-PAPER-INDEXER\TESTINDEXER\TESTEADDPUBLICATION.ARG.EXP
-FC: no differences encountered
+A comparar os ficheiros C:\USERS\TIAGO\DESKTOP\SCIENTIFIC-PAPER-INDEXER\TESTINDEXER\TesteAddPublication.arg.res e C:\USERS\TIAGO\DESKTOP\SCIENTIFIC-PAPER-INDEXER\TESTINDEXER\TESTEADDPUBLICATION.ARG.EXP
+FC: n∆o foram encontradas diferenáas
 
-VDM Test: '"C:\Users\Babo\Desktop\scientific-paper-indexer\TestIndexer\TestGetAuthorsByAff.arg"'
+VDM Test: '"C:\Users\Tiago\Desktop\scientific-paper-indexer\TestIndexer\TestGetAuthorsByAff.arg"'
 Parsing "Author.rtf" (Word RTF) ... ReadFontTbl: unknown token "\flomajor"
 ReadFontTbl: unknown token "\fdbmajor"
 ReadFontTbl: unknown token "\fhimajor"
@@ -8239,10 +8239,10 @@ Initializing Author
 Initializing Date
  done
 true
-Comparing files C:\USERS\BABO\DESKTOP\SCIENTIFIC-PAPER-INDEXER\TESTINDEXER\TestGetAuthorsByAff.arg.res and C:\USERS\BABO\DESKTOP\SCIENTIFIC-PAPER-INDEXER\TESTINDEXER\TESTGETAUTHORSBYAFF.ARG.EXP
-FC: no differences encountered
+A comparar os ficheiros C:\USERS\TIAGO\DESKTOP\SCIENTIFIC-PAPER-INDEXER\TESTINDEXER\TestGetAuthorsByAff.arg.res e C:\USERS\TIAGO\DESKTOP\SCIENTIFIC-PAPER-INDEXER\TESTINDEXER\TESTGETAUTHORSBYAFF.ARG.EXP
+FC: n∆o foram encontradas diferenáas
 
-VDM Test: '"C:\Users\Babo\Desktop\scientific-paper-indexer\TestIndexer\TestPathBetween.arg"'
+VDM Test: '"C:\Users\Tiago\Desktop\scientific-paper-indexer\TestIndexer\TestPathBetween.arg"'
 Parsing "Author.rtf" (Word RTF) ... ReadFontTbl: unknown token "\flomajor"
 ReadFontTbl: unknown token "\fdbmajor"
 ReadFontTbl: unknown token "\fhimajor"
@@ -9154,11 +9154,12 @@ Initializing Indexer
 Initializing Author
 Initializing Date
  done
-true
-Comparing files C:\USERS\BABO\DESKTOP\SCIENTIFIC-PAPER-INDEXER\TESTINDEXER\TestPathBetween.arg.res and C:\USERS\BABO\DESKTOP\SCIENTIFIC-PAPER-INDEXER\TESTINDEXER\TESTPATHBETWEEN.ARG.EXP
-FC: no differences encountered
+TestIndexer.rtf, l. 17, c. 17:
+  Run-Time Error 58: The pre-condition evaluated to false
+A comparar os ficheiros C:\USERS\TIAGO\DESKTOP\SCIENTIFIC-PAPER-INDEXER\TESTINDEXER\TestPathBetween.arg.res e C:\USERS\TIAGO\DESKTOP\SCIENTIFIC-PAPER-INDEXER\TESTINDEXER\TESTPATHBETWEEN.ARG.EXP
+FC: n∆o foram encontradas diferenáas
 
-VDM Test: '"C:\Users\Babo\Desktop\scientific-paper-indexer\TestAffiliation\TestGoodUsage.arg"'
+VDM Test: '"C:\Users\Tiago\Desktop\scientific-paper-indexer\TestAffiliation\TestGoodUsage.arg"'
 Parsing "Author.rtf" (Word RTF) ... ReadFontTbl: unknown token "\flomajor"
 ReadFontTbl: unknown token "\fdbmajor"
 ReadFontTbl: unknown token "\fhimajor"
@@ -10071,10 +10072,10 @@ Initializing Author
 Initializing Date
  done
 true
-Comparing files C:\USERS\BABO\DESKTOP\SCIENTIFIC-PAPER-INDEXER\TESTAFFILIATION\TestGoodUsage.arg.res and C:\USERS\BABO\DESKTOP\SCIENTIFIC-PAPER-INDEXER\TESTAFFILIATION\TESTGOODUSAGE.ARG.EXP
-FC: no differences encountered
+A comparar os ficheiros C:\USERS\TIAGO\DESKTOP\SCIENTIFIC-PAPER-INDEXER\TESTAFFILIATION\TestGoodUsage.arg.res e C:\USERS\TIAGO\DESKTOP\SCIENTIFIC-PAPER-INDEXER\TESTAFFILIATION\TESTGOODUSAGE.ARG.EXP
+FC: n∆o foram encontradas diferenáas
 
-VDM Test: '"C:\Users\Babo\Desktop\scientific-paper-indexer\TestInterest\TestInterest.arg"'
+VDM Test: '"C:\Users\Tiago\Desktop\scientific-paper-indexer\TestInterest\TestInterest.arg"'
 Parsing "Author.rtf" (Word RTF) ... ReadFontTbl: unknown token "\flomajor"
 ReadFontTbl: unknown token "\fdbmajor"
 ReadFontTbl: unknown token "\fhimajor"
@@ -10987,10 +10988,10 @@ Initializing Author
 Initializing Date
  done
 true
-Comparing files C:\USERS\BABO\DESKTOP\SCIENTIFIC-PAPER-INDEXER\TESTINTEREST\TestInterest.arg.res and C:\USERS\BABO\DESKTOP\SCIENTIFIC-PAPER-INDEXER\TESTINTEREST\TESTINTEREST.ARG.EXP
-FC: no differences encountered
+A comparar os ficheiros C:\USERS\TIAGO\DESKTOP\SCIENTIFIC-PAPER-INDEXER\TESTINTEREST\TestInterest.arg.res e C:\USERS\TIAGO\DESKTOP\SCIENTIFIC-PAPER-INDEXER\TESTINTEREST\TESTINTEREST.ARG.EXP
+FC: n∆o foram encontradas diferenáas
 
-VDM Test: '"C:\Users\Babo\Desktop\scientific-paper-indexer\TestDate\TestDate.arg"'
+VDM Test: '"C:\Users\Tiago\Desktop\scientific-paper-indexer\TestDate\TestDate.arg"'
 Parsing "Author.rtf" (Word RTF) ... ReadFontTbl: unknown token "\flomajor"
 ReadFontTbl: unknown token "\fdbmajor"
 ReadFontTbl: unknown token "\fhimajor"
@@ -11903,10 +11904,10 @@ Initializing Author
 Initializing Date
  done
 true
-Comparing files C:\USERS\BABO\DESKTOP\SCIENTIFIC-PAPER-INDEXER\TESTDATE\TestDate.arg.res and C:\USERS\BABO\DESKTOP\SCIENTIFIC-PAPER-INDEXER\TESTDATE\TESTDATE.ARG.EXP
-FC: no differences encountered
+A comparar os ficheiros C:\USERS\TIAGO\DESKTOP\SCIENTIFIC-PAPER-INDEXER\TESTDATE\TestDate.arg.res e C:\USERS\TIAGO\DESKTOP\SCIENTIFIC-PAPER-INDEXER\TESTDATE\TESTDATE.ARG.EXP
+FC: n∆o foram encontradas diferenáas
 
-VDM Test: '"C:\Users\Babo\Desktop\scientific-paper-indexer\TestPublication\TestCitations.arg"'
+VDM Test: '"C:\Users\Tiago\Desktop\scientific-paper-indexer\TestPublication\TestCitations.arg"'
 Parsing "Author.rtf" (Word RTF) ... ReadFontTbl: unknown token "\flomajor"
 ReadFontTbl: unknown token "\fdbmajor"
 ReadFontTbl: unknown token "\fhimajor"
@@ -12819,10 +12820,10 @@ Initializing Author
 Initializing Date
  done
 true
-Comparing files C:\USERS\BABO\DESKTOP\SCIENTIFIC-PAPER-INDEXER\TESTPUBLICATION\TestCitations.arg.res and C:\USERS\BABO\DESKTOP\SCIENTIFIC-PAPER-INDEXER\TESTPUBLICATION\TESTCITATIONS.ARG.EXP
-FC: no differences encountered
+A comparar os ficheiros C:\USERS\TIAGO\DESKTOP\SCIENTIFIC-PAPER-INDEXER\TESTPUBLICATION\TestCitations.arg.res e C:\USERS\TIAGO\DESKTOP\SCIENTIFIC-PAPER-INDEXER\TESTPUBLICATION\TESTCITATIONS.ARG.EXP
+FC: n∆o foram encontradas diferenáas
 
-VDM Test: '"C:\Users\Babo\Desktop\scientific-paper-indexer\TestPublication\TestCompareDate.arg"'
+VDM Test: '"C:\Users\Tiago\Desktop\scientific-paper-indexer\TestPublication\TestCompareDate.arg"'
 Parsing "Author.rtf" (Word RTF) ... ReadFontTbl: unknown token "\flomajor"
 ReadFontTbl: unknown token "\fdbmajor"
 ReadFontTbl: unknown token "\fhimajor"
@@ -13735,10 +13736,10 @@ Initializing Author
 Initializing Date
  done
 true
-Comparing files C:\USERS\BABO\DESKTOP\SCIENTIFIC-PAPER-INDEXER\TESTPUBLICATION\TestCompareDate.arg.res and C:\USERS\BABO\DESKTOP\SCIENTIFIC-PAPER-INDEXER\TESTPUBLICATION\TESTCOMPAREDATE.ARG.EXP
-FC: no differences encountered
+A comparar os ficheiros C:\USERS\TIAGO\DESKTOP\SCIENTIFIC-PAPER-INDEXER\TESTPUBLICATION\TestCompareDate.arg.res e C:\USERS\TIAGO\DESKTOP\SCIENTIFIC-PAPER-INDEXER\TESTPUBLICATION\TESTCOMPAREDATE.ARG.EXP
+FC: n∆o foram encontradas diferenáas
 
-VDM Test: '"C:\Users\Babo\Desktop\scientific-paper-indexer\TestPublication\TestGoodUsage.arg"'
+VDM Test: '"C:\Users\Tiago\Desktop\scientific-paper-indexer\TestPublication\TestGoodUsage.arg"'
 Parsing "Author.rtf" (Word RTF) ... ReadFontTbl: unknown token "\flomajor"
 ReadFontTbl: unknown token "\fdbmajor"
 ReadFontTbl: unknown token "\fhimajor"
@@ -14651,6 +14652,6 @@ Initializing Author
 Initializing Date
  done
 true
-Comparing files C:\USERS\BABO\DESKTOP\SCIENTIFIC-PAPER-INDEXER\TESTPUBLICATION\TestGoodUsage.arg.res and C:\USERS\BABO\DESKTOP\SCIENTIFIC-PAPER-INDEXER\TESTPUBLICATION\TESTGOODUSAGE.ARG.EXP
-FC: no differences encountered
+A comparar os ficheiros C:\USERS\TIAGO\DESKTOP\SCIENTIFIC-PAPER-INDEXER\TESTPUBLICATION\TestGoodUsage.arg.res e C:\USERS\TIAGO\DESKTOP\SCIENTIFIC-PAPER-INDEXER\TESTPUBLICATION\TESTGOODUSAGE.ARG.EXP
+FC: n∆o foram encontradas diferenáas
 

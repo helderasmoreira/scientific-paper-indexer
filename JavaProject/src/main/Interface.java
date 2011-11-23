@@ -7,6 +7,7 @@ import java.util.Vector;
 import jp.co.csk.vdm.toolbox.VDM.CGException;
 import jp.co.csk.vdm.toolbox.VDM.UTIL;
 
+
 public class Interface {
 	
 	//TODO Arranjar a parte de adicionar automaticamente as citações (VDM)
@@ -49,9 +50,10 @@ private static void fillData() throws CGException {
 		HashSet<Author> h1 = new HashSet<Author>();
 		h1.add(a);
 		h1.add(b);
+		h1.add(c);
 		HashSet<Author> h2 = new HashSet<Author>();
-		h2.add(b);
 		h2.add(c);
+		//h2.add(c);
 		HashSet<Author> h3 = new HashSet<Author>();
 		h3.add(c);
 		h3.add(d);
@@ -150,7 +152,9 @@ private static void fillData() throws CGException {
 				break;
 			
 			}
-			
+			in = new Scanner(System.in);
+			System.out.println("Prima ENTER para continuar...");
+			in.nextLine();
 			
 		}while(op!=0);
 		
@@ -240,12 +244,16 @@ private static void fillData() throws CGException {
 		
 		Vector<Author> res = new Vector<Author>();
 		res = i.pathBetween((Author)i.authors.keySet().toArray()[Integer.parseInt(temp2[0])-1], (Author)i.authors.keySet().toArray()[Integer.parseInt(temp2[1])-1]);
-		
-		for(int i = 0; i < res.size(); i++)
-			if (i != res.size()-1)
-				System.out.print(res.get(i).name + " -> ");
-			else
-				System.out.println(res.get(i).name);
+		if(res.size() == 0)
+			System.out.println("Não se encontram ligados");
+		else
+		{
+			for(int i = 0; i < res.size(); i++)
+				if (i != res.size()-1)
+					System.out.print(res.get(i).name + " -> ");
+				else
+					System.out.println(res.get(i).name);
+		}
 	}
 	
 	private static void addAuthorInterest() throws CGException {
