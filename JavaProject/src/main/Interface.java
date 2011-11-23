@@ -122,7 +122,9 @@ private static void fillData() throws CGException {
 				relateAffiliationAuthor();
 				break;
 			case 6:
-				addPublication();
+				if(!i.authors.isEmpty())
+					addPublication();
+				else System.out.println("Adicione autores...");
 				break;
 			case 7: 
 				listPublications(true);
